@@ -31,6 +31,11 @@
             <p>All requests require an API key provided in the request header.</p>
         </section>
         
+        <section id="section_request">
+            <title>Request</title>
+            <p>An API request will look and behave differently depending on the type of API.</p>
+        </section>
+        
     </conbody>
     
 </concept>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "concept.dtd">
+<concept id="concept_api_overview">
+    
+    <title>Order Management API Overview</title>
+    
+    <shortdesc>
+        The Order Management API allows applications to create, retrieve,
+        and manage customer orders.
+    </shortdesc>
+    
+    <conbody>
+        
+        <section id="section_audience">
+            <title>Audience</title>
+            <p>This documentation is intended for software developers,
+                integrators, and technical teams.</p>
+        </section>
+        
+        <section id="section_prerequisites">
+            <title>Prerequisites</title>
+            <ul>
+                <li>Basic knowledge of REST APIs</li>
+                <li>Understanding of JSON format</li>
+                <li>API access credentials</li>
+            </ul>
+        </section>
+        
+        <section id="section_authentication">
+            <title>Authentication</title>
+            <p>All requests require an API key provided in the request header.</p>
+        </section>
+        
+    </conbody>
+    
+</concept>
+

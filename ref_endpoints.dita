@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="ref_endpoints">
+    <title>API Endpoints</title>
+    
+    <shortdesc>
+        Reference for all available endpoints of the Order Management API.
+    </shortdesc>
+    
+    <refbody>
+        
+        <section id="section_get_all_orders">
+            <title>Get All Orders</title>
+            <p>Returns a list of all orders.</p>
+            <properties>
+                <prophead>
+                    <proptypehd>Property</proptypehd>
+                    <propvaluehd>Value</propvaluehd>
+                </prophead>
+                <property>
+                    <proptype>Method</proptype>
+                    <propvalue>GET</propvalue>
+                </property>
+                <property>
+                    <proptype>URL</proptype>
+                    <propvalue>/orders</propvalue>
+                </property>
+                <property>
+                    <proptype>Response code</proptype>
+                    <propvalue>200</propvalue>
+                </property>
+            </properties>
+            <p><b>Response example:</b></p>
+            <codeblock>
+                [
+                {
+                "id": 101,
+                "customer": "John Smith",
+                "status": "Processing"
+                }
+                ]
+            </codeblock>
+        </section>
+        
+        <section id="section_create_order">
+            <title>Create Order</title>
+            <p>Creates a new order.</p>
+            <properties>
+                <prophead>
+                    <proptypehd>Property</proptypehd>
+                    <propvaluehd>Value</propvaluehd>
+                </prophead>
+                <property>
+                    <proptype>Method</proptype>
+                    <propvalue>POST</propvalue>
+                </property>
+                <property>
+                    <proptype>URL</proptype>
+                    <propvalue>/orders</propvalue>
+                </property>
+                <property>
+                    <proptype>Response code</proptype>
+                    <propvalue>201</propvalue>
+                </property>
+            </properties>
+            <p><b>Request body fields:</b></p>
+            <table>
+                <tgroup cols="3">
+                    <colspec colname="col1" colwidth="2*"/>
+                    <colspec colname="col2" colwidth="1*"/>
+                    <colspec colname="col3" colwidth="1*"/>
+                    <thead>
+                        <row>
+                            <entry>Field</entry>
+                            <entry>Type</entry>
+                            <entry>Required</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>customer</entry>
+                            <entry>string</entry>
+                            <entry>Yes</entry>
+                        </row>
+                        <row>
+                            <entry>product</entry>
+                            <entry>string</entry>
+                            <entry>Yes</entry>
+                        </row>
+                        <row>
+                            <entry>quantity</entry>
+                            <entry>integer</entry>
+                            <entry>Yes</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <p><b>Request example:</b></p>
+            <codeblock>
+                {
+                "customer": "John Smith",
+                "product": "Laptop",
+                "quantity": 1
+                }
+            </codeblock>
+            <p><b>Response example:</b></p>
+            <codeblock>
+                {
+                "id": 102,
+                "status": "Created"
+                }
+            </codeblock>
+        </section>
+        
+        <section id="section_get_order_details">
+            <title>Get Order Details</title>
+            <p>Returns details for a specific order.</p>
+            <properties>
+                <prophead>
+                    <proptypehd>Property</proptypehd>
+                    <propvaluehd>Value</propvaluehd>
+                </prophead>
+                <property>
+                    <proptype>Method</proptype>
+                    <propvalue>GET</propvalue>
+                </property>
+                <property>
+                    <proptype>URL</proptype>
+                    <propvalue>/orders/{id}</propvalue>
+                </property>
+                <property>
+                    <proptype>Response code</proptype>
+                    <propvalue>200</propvalue>
+                </property>
+            </properties>
+            <p><b>Path parameter:</b></p>
+            <table>
+                <tgroup cols="3">
+                    <colspec colname="col1" colwidth="2*"/>
+                    <colspec colname="col2" colwidth="1*"/>
+                    <colspec colname="col3" colwidth="3*"/>
+                    <thead>
+                        <row>
+                            <entry>Parameter</entry>
+                            <entry>Type</entry>
+                            <entry>Description</entry>
+                        </row>
+                    </thead>
+                    <tbody>
+                        <row>
+                            <entry>id</entry>
+                            <entry>integer</entry>
+                            <entry>Unique order identifier.</entry>
+                        </row>
+                    </tbody>
+                </tgroup>
+            </table>
+            <p><b>Response example:</b></p>
+            <codeblock>
+                {
+                "id": 101,
+                "customer": "John Smith",
+                "product": "Laptop",
+                "quantity": 1,
+                "status": "Processing"
+                }
+            </codeblock>
+        </section>
+        
+    </refbody>
+    
+</reference>

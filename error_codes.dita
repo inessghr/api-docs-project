@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="error_codes">
+    <title>Error Codes</title>
+    
+    <shortdesc>
+        Reference for HTTP error codes returned by the Order Management API.
+    </shortdesc>
+    
+    <refbody>
+        
+        <table>
+            <tgroup cols="4">
+                <colspec colname="col1" colwidth="1*"/>
+                <colspec colname="col2" colwidth="2*"/>
+                <colspec colname="col3" colwidth="3*"/>
+                <colspec colname="col4" colwidth="3*"/>
+                <thead>
+                    <row>
+                        <entry>Code</entry>
+                        <entry>Name</entry>
+                        <entry>Description</entry>
+                        <entry>Solution</entry>
+                    </row>
+                </thead>
+                <tbody>
+                    <row>
+                        <entry>400</entry>
+                        <entry>Bad Request</entry>
+                        <entry>The request contains invalid or missing data.</entry>
+                        <entry>Verify all required fields before sending the request.</entry>
+                    </row>
+                    <row>
+                        <entry>401</entry>
+                        <entry>Unauthorized</entry>
+                        <entry>Authentication failed.</entry>
+                        <entry>Check that the API key is valid and correctly configured.</entry>
+                    </row>
+                    <row>
+                        <entry>404</entry>
+                        <entry>Not Found</entry>
+                        <entry>The requested resource does not exist.</entry>
+                        <entry>Verify the endpoint URL and resource identifier.</entry>
+                    </row>
+                    <row>
+                        <entry>500</entry>
+                        <entry>Internal Server Error</entry>
+                        <entry>An unexpected server error occurred.</entry>
+                        <entry>Retry the request later or contact support.</entry>
+                    </row>
+                </tbody>
+            </tgroup>
+        </table>
+        
+    </refbody>
+    
+</reference>
